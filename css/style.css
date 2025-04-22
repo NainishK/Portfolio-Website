@@ -1,39 +1,95 @@
 :root {
-    --primary-color: #0366d6;
-    --bg-color: #ffffff;
-    --text-color: #24292e;
-    --secondary-bg: #f6f8fa;
-    --border-color: #e1e4e8;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --pill-bg: #f3f3f3;
-    --pill-text: #24292e;
-    --pill-border: #e1e4e8;
-}
-
-.dark-mode {
-    --primary-color: #58a6ff;
-    --bg-color: #0d1117;
-    --text-color: #c9d1d9;
-    --secondary-bg: #161b22;
-    --border-color: #30363d;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --pill-bg: #161b22;
-    --pill-text: #c9d1d9;
-    --pill-border: #30363d;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    /* Classic, neutral dark theme */
+    --primary-bg: #101014;
+    --secondary-bg: #18181c;
+    --card-bg: #18181c;
+    --skills-card-bg: #23232a;
+    --primary-color: #8ab4f8; /* soft blue accent */
+    --accent-color: #4fd1c5; /* teal accent for buttons/links */
+    --pill-bg: #23232a;
+    --pill-border: #35363a;
+    --text-color: #f3f4f8;
+    --muted-text: #9ca3af;
+    --shadow-color: rgba(0,0,0,0.58);
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    background: var(--primary-bg);
     color: var(--text-color);
-    background-color: var(--bg-color);
-    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Roboto', 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    font-family: 'Roboto', 'Inter', Arial, sans-serif;
+}
+
+/* Material Card and Animation for Skills Category */
+.skills-category {
+    background: var(--skills-card-bg);
+    border-radius: 1.1rem;
+    box-shadow: 0 2px 14px 0 var(--shadow-color);
+    padding: 1.7rem 1.5rem 1.1rem 1.5rem;
+    margin-bottom: 2.2rem;
+    transition: box-shadow 0.28s cubic-bezier(.4,0,.2,1),
+                transform 0.22s cubic-bezier(.4,0,.2,1),
+                background 0.3s;
+    will-change: box-shadow, transform, background;
+}
+.skills-category:nth-child(even) {
+    background: linear-gradient(135deg, #23232a 60%, #18181c 100%);
+}
+.skills-category:nth-child(odd) {
+    background: linear-gradient(135deg, #18181c 60%, #23232a 100%);
+}
+
+
+.skills-category:hover {
+    box-shadow: 0 8px 32px 0 var(--shadow-color);
+    transform: translateY(-6px) scale(1.045);
+    z-index: 2;
+}
+
+/* Accent for skill icons */
+.category-icon i {
+    color: var(--accent-color);
+    font-size: 1.45rem;
+}
+
+/* Update skill pills for dark theme */
+.skills-pills .skill-badge {
+    background: var(--pill-bg);
+    color: var(--text-color);
+    border: 1px solid var(--pill-border);
+}
+
+/* Update About/Education cards for Material look */
+.about-card, .education-card {
+    background: var(--card-bg);
+    box-shadow: 0 2px 10px 0 var(--shadow-color);
+    border-radius: 1.1rem;
+    transition: box-shadow 0.28s cubic-bezier(.4,0,.2,1);
+}
+.about-card:hover, .education-card:hover {
+    box-shadow: 0 8px 32px 0 var(--shadow-color);
+}
+
+/* Button and link accents */
+.resume-btn, .social-links a {
+    background: var(--accent-color);
+    color: #fff !important;
+    border-radius: 2rem;
+    transition: background 0.2s;
+}
+.resume-btn:hover, .social-links a:hover {
+    background: #0097a7;
+}
+
+/* Muted text */
+.tagline {
+    color: var(--muted-text);
 }
 
 .container {
@@ -47,10 +103,13 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--bg-color);
-    box-shadow: 0 1px 3px var(--shadow-color);
+    background: rgba(16, 16, 20, 0.98); /* solid dark with slight transparency */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 16px 0 var(--shadow-color);
     z-index: 1000;
 }
+
 
 .nav-content {
     display: flex;
