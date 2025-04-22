@@ -5,6 +5,9 @@
     --secondary-bg: #f6f8fa;
     --border-color: #e1e4e8;
     --shadow-color: rgba(0, 0, 0, 0.1);
+    --pill-bg: #f3f3f3;
+    --pill-text: #24292e;
+    --pill-border: #e1e4e8;
 }
 
 .dark-mode {
@@ -14,6 +17,9 @@
     --secondary-bg: #161b22;
     --border-color: #30363d;
     --shadow-color: rgba(0, 0, 0, 0.3);
+    --pill-bg: #161b22;
+    --pill-text: #c9d1d9;
+    --pill-border: #30363d;
 }
 
 * {
@@ -141,6 +147,60 @@ h2 {
     text-align: center;
 }
 
+/* About Me Section */
+
+.education-card {
+    background: var(--secondary-bg);
+    padding: 2rem 2.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    margin: 2rem auto 2.5rem auto;
+    max-width: 700px;
+    text-align: left;
+    transition: background 0.3s;
+}
+.education-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+.education-card p {
+    font-size: 1.08rem;
+    margin: 0.3rem 0;
+    color: var(--text-color);
+}
+@media (max-width: 700px) {
+    .education-card {
+        padding: 1.3rem;
+        max-width: 98vw;
+    }
+}
+
+.about-card {
+    background: var(--secondary-bg);
+    padding: 2rem 2.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    margin: 2rem auto 2.5rem auto;
+    max-width: 900px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.about-text p {
+    font-size: 1.18rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .about-card {
+        padding: 1.3rem;
+    }
+}
+
 /* Skills Section */
 .skills-categories {
     display: flex;
@@ -212,10 +272,10 @@ body .skills-pills .skill-badge, body .skill-badge {
     font-weight: 500;
     padding: 0.38em 1em;
     border-radius: 2em;
-    background-color: #23272f !important;
+    background-color: var(--pill-bg);
     background-clip: padding-box;
-    color: #bfc4ca !important;
-    border: 1px solid #2d313a;
+    color: var(--pill-text);
+    border: 1px solid var(--pill-border);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07);
     transition: background 0.2s, color 0.2s;
     overflow-wrap: anywhere;
@@ -223,9 +283,9 @@ body .skills-pills .skill-badge, body .skill-badge {
 }
 
 body .skills-pills .skill-badge:hover, body .skill-badge:hover {
-    background-color: #0078d4 !important;
-    color: #bfc4ca !important;
-    border-color: #005fa3 !important;
+    background-color: #0078d4;
+    color: #fff;
+    border-color: #005fa3;
 }
 
 .skills-category h3 {
