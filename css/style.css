@@ -52,7 +52,35 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 
-/* Accent for skill icons */
+/* Colorful skill icons */
+.python-color { color: #3776AB; }
+.js-color { color: #F7DF1E; }
+.html-color { color: #E44D26; }
+.css-color { color: #1572B6; }
+.docker-color { color: #2496ED; }
+.aws-color { color: #FF9900; }
+.git-color { color: #F05032; }
+.github-color { color: #181717; }
+.postgres-color { color: #336791; }
+.mysql-color { color: #00758F; }
+.mongo-color { color: #47A248; }
+.linux-color { color: #FCC624; }
+.django-color { color: #092E20; }
+.fastapi-color { color: #009688; }
+.langchain-color { color: #2E86AB; }
+.genai-color { color: #7C3AED; }
+.llm-color { color: #FF6F61; }
+.drf-color { color: #E44D26; }
+.vscode-color { color: #007ACC; }
+.pandas-color { color: #150458; }
+.celery-color { color: #37814a; }
+.sqlalchemy-color { color: #d71f00; }
+.pyfpdf-color { color: #e03c31; }
+.dask-color { color: #ffac00; }
+.redis-color { color: #d82c20; }
+.c-color { color: #00599C; }
+.java-color { color: #007396; }
+
 .category-icon i {
     color: var(--accent-color);
     font-size: 1.45rem;
@@ -60,10 +88,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Update skill pills for dark theme */
 .skills-pills .skill-badge {
-    background: var(--pill-bg);
+    background: var(--pill-bg-light, #29293a);
     color: var(--text-color);
     border: 1px solid var(--pill-border);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    font-size: 1.08em;
+    padding: 0.38em 1em 0.38em 0.7em;
+    margin: 0.25em 0.35em 0.25em 0;
 }
+.skills-pills .skill-badge i {
+    font-size: 1.15em;
+    vertical-align: middle;
+}
+
 
 /* Update About/Education cards for Material look */
 .about-card, .education-card {
