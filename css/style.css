@@ -39,7 +39,9 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 0;
     max-width: 100%;
     width: 100%;
-    margin-bottom: 2.2rem;
+    margin: 0 0 0 0;
+    display: inline-block;
+    break-inside: avoid;
 }
 .skills-category:nth-child(even) {
     background: linear-gradient(135deg, #23232a 60%, #18181c 100%);
@@ -303,11 +305,21 @@ h2 {
 
 /* Skills Section */
 .skills-categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
+    column-count: 3;
+    column-gap: 0;
     margin-top: 3rem;
-    align-items: start;
+    width: 100%;
+    padding: 0;
+}
+@media (max-width: 900px) {
+    .skills-categories {
+        column-count: 2;
+    }
+}
+@media (max-width: 600px) {
+    .skills-categories {
+        column-count: 1;
+    }
 }
 
 
