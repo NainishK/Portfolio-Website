@@ -32,11 +32,14 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 1.1rem;
     box-shadow: 0 2px 14px 0 var(--shadow-color);
     padding: 1.7rem 1.5rem 1.1rem 1.5rem;
-    margin-bottom: 2.2rem;
     transition: box-shadow 0.28s cubic-bezier(.4,0,.2,1),
                 transform 0.22s cubic-bezier(.4,0,.2,1),
                 background 0.3s;
     will-change: box-shadow, transform, background;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 0;
 }
 .skills-category:nth-child(even) {
     background: linear-gradient(135deg, #23232a 60%, #18181c 100%);
@@ -304,7 +307,8 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-top: 3rem;
 }
 
@@ -597,8 +601,9 @@ footer {
 /* Responsive Design */
 @media (max-width: 1100px) {
     .skills-categories {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+        align-items: stretch;
     }
 }
 
