@@ -30,8 +30,8 @@ h1, h2, h3, h4, h5, h6 {
 .skills-category {
     background: var(--skills-card-bg);
     border-radius: 1.1rem;
-    box-shadow: 0 2px 14px 0 var(--shadow-color);
-    padding: 1.7rem 1.5rem 1.1rem 1.5rem;
+    box-shadow: 0 6px 32px 0 rgba(79,209,197,0.13), 0 2px 14px 0 var(--shadow-color);
+    padding: 1.2rem 1.2rem 1rem 1.2rem;
     transition: box-shadow 0.28s cubic-bezier(.4,0,.2,1),
                 transform 0.22s cubic-bezier(.4,0,.2,1),
                 background 0.3s;
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 0;
     max-width: 100%;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 2.2rem;
 }
 .skills-category:nth-child(even) {
     background: linear-gradient(135deg, #23232a 60%, #18181c 100%);
@@ -93,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
 .skills-pills .skill-badge {
     background: linear-gradient(315deg, #18181c 60%, #23232a 100%);
     color: var(--text-color);
-    border: 1px solid var(--pill-border);
     display: inline-flex;
     align-items: center;
     gap: 0.45em;
@@ -304,29 +303,13 @@ h2 {
 
 /* Skills Section */
 .skills-categories {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
-    align-items: flex-start;
-    justify-content: flex-start;
     margin-top: 3rem;
+    align-items: start;
 }
 
-.skills-category {
-    background: transparent;
-    border-radius: 14px;
-    box-shadow: none;
-    padding: 1.6rem 2rem 1.4rem 2rem;
-    min-width: 220px;
-    flex: 1 1 220px;
-    max-width: 320px;
-    margin-bottom: 2.8rem;
-    border: 1.5px solid #e0e6ed;
-    position: relative;
-}
-.skills-category:not(:first-child) {
-    border-top: 3px solid #e3eaf5;
-}
 
 .skill-badges {
     display: flex;
