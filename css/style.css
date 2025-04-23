@@ -640,6 +640,7 @@ body .skills-pills .skill-badge:hover, body .skill-badge:hover {
     color: var(--accent-color);
     margin-right: 0.4em;
     font-size: 1.1em;
+}
 .timeline-content ul {
     margin: 0;
     padding-left: 0;
