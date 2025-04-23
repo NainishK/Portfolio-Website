@@ -164,9 +164,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    outline: none;
+}
+.logo-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8ab4f8 0%, #4fd1c5 100%);
+    background-clip: padding-box;
+    /* Gradient text effect for initials */
+    background-image: linear-gradient(90deg, #23242a 10%, #8ab4f8 60%, #4fd1c5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #fff;
     font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 12px 0 rgba(79,209,197,0.13), 0 1px 4px 0 var(--shadow-color);
+    transition: transform 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s cubic-bezier(.4,0,.2,1);
+    border: 3px solid rgba(255,255,255,0.08);
+    margin-right: 0.6em;
+}
+.logo:hover .logo-badge, .logo:focus .logo-badge {
+    transform: scale(1.08) rotate(-4deg);
+    box-shadow: 0 4px 20px 0 #4fd1c5, 0 2px 8px 0 var(--shadow-color);
+}
+@media (max-width: 600px) {
+    .logo-badge {
+        width: 36px;
+        height: 36px;
+        font-size: 1.07rem;
+    }
 }
 
 .nav-links {
@@ -177,10 +212,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links a {
+    position: relative;
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
+    padding: 0.3em 0.7em;
     transition: color 0.3s;
+    display: inline-block;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.15em;
+    height: 3px;
+    background: linear-gradient(90deg, #8ab4f8, #4fd1c5 80%);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.28s cubic-bezier(.4,0,.2,1);
+    z-index: 1;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
 }
 
 .nav-links a:hover {
