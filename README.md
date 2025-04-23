@@ -1,5 +1,7 @@
 # Personal Portfolio Website
 
+**Live Website:** [https://nainishk.github.io/Portfolio-Website/](https://nainishk.github.io/Portfolio-Website/)
+
 A modern, responsive personal portfolio website built with HTML5, CSS3, and JavaScript.
 
 ## Features
