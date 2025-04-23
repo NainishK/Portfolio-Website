@@ -530,6 +530,22 @@ h2 {
     color: var(--text-color);
 }
 
+/* Education card capsules (cgpa, duration) - default for dark mode */
+.education-card .cgpa,
+.education-card .duration {
+    display: inline-block;
+    background: #23232a;
+    color: #8ab4f8;
+    border-radius: 1em;
+    padding: 0.2em 0.7em;
+    font-weight: 600;
+    margin-right: 0.7em;
+    font-size: 0.97em;
+    border: 1px solid #35363a;
+    letter-spacing: 0.01em;
+    transition: background 0.2s, color 0.2s;
+}
+
 /* Light theme override for cgpa/duration in education */
 .light-mode .education-card .cgpa,
 .light-mode .education-card .duration {
