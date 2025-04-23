@@ -52,3 +52,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Timeline card fade/slide-in on scroll
+function handleTimelineScroll() {
+    const cards = document.querySelectorAll('.timeline-content');
+    const trigger = window.innerHeight * 0.88;
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < trigger) {
+            card.classList.add('timeline-visible');
+        }
+    });
+}
+window.addEventListener('scroll', handleTimelineScroll);
+window.addEventListener('resize', handleTimelineScroll);
+document.addEventListener('DOMContentLoaded', handleTimelineScroll);
