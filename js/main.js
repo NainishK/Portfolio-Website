@@ -6,21 +6,35 @@ const themeIcon = themeToggle.querySelector('i');
 // Check for saved theme preference
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
+    body.classList.remove('dark-mode', 'light-mode');
     body.classList.add(savedTheme);
     updateThemeIcon(savedTheme === 'dark-mode');
 } else {
     // Check system preference
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        body.classList.remove('light-mode');
         body.classList.add('dark-mode');
         updateThemeIcon(true);
+    } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        updateThemeIcon(false);
     }
 }
 
 themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-    localStorage.setItem('theme', isDark ? 'dark-mode' : 'light-mode');
-    updateThemeIcon(isDark);
+    const isCurrentlyDark = body.classList.contains('dark-mode');
+    if (isCurrentlyDark) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light-mode');
+        updateThemeIcon(false);
+    } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+        updateThemeIcon(true);
+    }
 });
 
 function updateThemeIcon(isDark) {

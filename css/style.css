@@ -13,6 +13,116 @@
     --shadow-color: rgba(0,0,0,0.58);
 }
 
+.light-mode {
+    --primary-bg: #f4f7fb;
+    --secondary-bg: #fff;
+    --card-bg: #fff;
+    --skills-card-bg: #e9eef6;
+    --primary-color: #2563eb;
+    --accent-color: #1abc9c;
+    --pill-bg: #e9eef6;
+    --pill-border: #e0e7ef;
+    --text-color: #2d3748;
+    --muted-text: #64748b;
+    --shadow-color: rgba(44, 62, 80, 0.06);
+    --font-family: 'Inter', 'Poppins', Arial, sans-serif;
+}
+
+
+.light-mode body {
+    background: var(--primary-bg);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.light-mode body h1, .light-mode body h2, .light-mode body h3, .light-mode body h4, .light-mode body h5, .light-mode body h6 {
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: 700;
+}
+
+.light-mode body .tagline {
+    color: var(--muted-text);
+    font-family: var(--font-family);
+}
+
+.light-mode .navbar {
+    background: rgba(255,255,255,0.93) !important;
+    box-shadow: 0 2px 16px 0 var(--shadow-color) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.light-mode body .logo-badge {
+    background: linear-gradient(135deg, #e3f0ff 0%, #c7f5ee 100%);
+    background-clip: padding-box;
+    background-image: linear-gradient(90deg, #2563eb 10%, #1abc9c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: 3px solid #e0e7ef;
+    font-family: var(--font-family);
+}
+
+.light-mode body .skills-category,
+.light-mode body .about-card,
+.light-mode body .education-card {
+    background: var(--card-bg);
+    box-shadow: 0 2px 10px 0 var(--shadow-color);
+    border-radius: 1.1rem;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+.light-mode body .skills-pills .skill-badge {
+    background: linear-gradient(315deg, #e9eef6 60%, #fff 100%);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    border: 1px solid var(--pill-border);
+}
+
+.light-mode body .resume-btn,
+.light-mode body .social-links a {
+    background: var(--primary-color);
+    color: #fff !important;
+    font-family: var(--font-family);
+    font-weight: 600;
+    box-shadow: 0 2px 8px 0 var(--shadow-color);
+}
+
+.light-mode body .resume-btn:hover,
+.light-mode body .social-links a:hover {
+    background: #174ea6;
+}
+
+.light-mode body .nav-links a {
+    color: var(--text-color);
+}
+
+.light-mode body .nav-links a:hover,
+.light-mode body .nav-links a.active {
+    color: var(--primary-color);
+}
+
+.light-mode body .nav-links a::after {
+    background: linear-gradient(90deg, #0366d6, #4fd1c5 80%);
+}
+
+.light-mode body .timeline-content {
+    background: #fff;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    box-shadow: 0 2px 12px 0 var(--shadow-color);
+}
+
+.light-mode body .timeline-icon {
+    background: #e9eef6;
+    color: #2563eb;
+    border: 3px solid #e0e7ef;
+    box-shadow: 0 2px 8px 0 var(--shadow-color);
+}
+
+
 body {
     background: var(--primary-bg);
     color: var(--text-color);
@@ -48,6 +158,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .skills-category:nth-child(odd) {
     background: linear-gradient(135deg, #18181c 60%, #23232a 100%);
+}
+
+/* Light theme override for skills category */
+.light-mode .skills-category {
+    background: var(--card-bg) !important;
+    box-shadow: 0 2px 10px 0 var(--shadow-color) !important;
+    color: var(--text-color) !important;
 }
 
 
@@ -102,11 +219,39 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.38em 1em 0.38em 0.7em;
     margin: 0.25em 0.35em 0.25em 0;
 }
+
+/* Light theme override for skill badge */
+.light-mode .skills-pills .skill-badge {
+    background: linear-gradient(315deg, #e9eef6 60%, #fff 100%) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--pill-border) !important;
+}
 .skills-pills .skill-badge i {
     font-size: 1.15em;
     vertical-align: middle;
 }
 
+/* Light mode social icon color fix */
+.light-mode .social-links a i {
+    color: var(--primary-color) !important;
+}
+.light-mode .social-links a:hover {
+    background: #e9eef6 !important;
+    border-radius: 50% !important;
+    transition: background 0.2s;
+}
+.light-mode .social-links a:hover i {
+    color: #174ea6 !important;
+    transition: color 0.2s;
+}
+
+/* Light mode hover effect for skill badge */
+.light-mode .skills-pills .skill-badge:hover,
+.light-mode .skill-badge:hover {
+    background-color: #2563eb !important;
+    color: var(--text-color) !important;
+    border-color: #174ea6 !important;
+}
 
 /* Update About/Education cards for Material look */
 .about-card, .education-card {
@@ -384,6 +529,13 @@ h2 {
     margin: 0.3rem 0;
     color: var(--text-color);
 }
+
+/* Light theme override for cgpa/duration in education */
+.light-mode .education-card .cgpa,
+.light-mode .education-card .duration {
+    background: #e9eef6 !important;
+    color: var(--primary-color) !important;
+}
 @media (max-width: 700px) {
     .education-card {
         padding: 1.3rem;
@@ -656,11 +808,31 @@ body .skills-pills .skill-badge:hover, body .skill-badge:hover {
     transform: translateY(40px);
     will-change: opacity, transform;
 }
+
+/* Light theme override for timeline content */
+.light-mode .timeline-content {
+    background: #fff !important;
+    color: var(--text-color) !important;
+    box-shadow: 0 2px 12px 0 var(--shadow-color) !important;
+}
 .timeline-content.timeline-visible {
     opacity: 1;
     transform: none;
     transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
 }
+
+/* Light theme override for job description points in experience */
+.light-mode .timeline-content ul,
+.light-mode .timeline-content ul li,
+.light-mode .timeline-content ul * {
+    color: var(--text-color) !important;
+}
+/* Light mode fix for exp-floating-panel job description points */
+.light-mode .timeline-content .exp-floating-panel {
+    color: var(--text-color) !important;
+    background: #f7fafc !important; /* Optional: makes it stand out in light mode */
+}
+
 .timeline-content:hover {
     box-shadow: 0 6px 18px 0 rgba(0,0,0,0.48), 0 2px 8px 0 rgba(0,0,0,0.26);
     transform: translateY(-7px) scale(1.018);
@@ -747,6 +919,12 @@ body .skills-pills .skill-badge:hover, body .skill-badge:hover {
     margin-left: 0.2em;
     gap: 0.5em;
     font-weight: 500;
+}
+
+/* Light theme override for exp-duration */
+.light-mode .exp-duration {
+    background: var(--pill-bg) !important;
+    color: var(--muted-text) !important;
 }
 .exp-duration i {
     color: var(--accent-color);
