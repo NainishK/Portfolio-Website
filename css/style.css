@@ -92,7 +92,11 @@
 
 .light-mode body .resume-btn:hover,
 .light-mode body .social-links a:hover {
-    background: #174ea6;
+    background: #174ea6 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px 0 var(--primary-color);
+    transform: translateY(-2px) scale(1.04);
+    transition: background 0.18s, box-shadow 0.22s, transform 0.18s;
 }
 
 .light-mode body .nav-links a {

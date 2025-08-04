@@ -8,6 +8,8 @@
     <title>Nainish Kher - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Devicon CDN for TypeScript icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="light-mode">
@@ -23,6 +25,7 @@
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#achievements">Achievements</a></li>
@@ -93,11 +96,13 @@
         <span class="skill-badge"><i class="fab fa-js-square js-color"></i> JavaScript</span>
         <span class="skill-badge"><i class="fab fa-html5 html-color"></i> HTML</span>
         <span class="skill-badge"><i class="fab fa-css3-alt css-color"></i> CSS</span>
+        <span class="skill-badge"><i class="devicon-typescript-plain colored" style="color:#3178c6;"></i> TypeScript</span>
     </div>
 </div>
 <div class="skills-category">
     <h3>Frameworks</h3>
     <div class="skills-pills">
+        
         <span class="skill-badge"><i class="fab fa-python django-color"></i> Django</span>
         <span class="skill-badge"><i class="fas fa-bolt fastapi-color"></i> FastAPI</span>
         <span class="skill-badge"><i class="fas fa-plug drf-color"></i> Django REST Framework (DRF)</span>
@@ -170,6 +175,41 @@
     </div>
 </div>
     </div>
+</section>
+
+<section id="projects" class="projects">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <div class="project-card" style="background:var(--card-bg);padding:2rem 2.5rem;border-radius:1.2rem;box-shadow:0 4px 24px 0 rgba(0,0,0,0.08);margin-bottom:2.5rem;">
+      <div style="display:flex;align-items:center;gap:1.2em;margin-bottom:1em;">
+        <img src="assets/codenotes.png" alt="Sticky CodeNotes Logo" style="height:3.6em;width:3.6em;object-fit:contain;border-radius:0.5em;box-shadow:0 2px 8px 0 rgba(0,0,0,0.08);margin-right:-0.12em;vertical-align:middle;" />
+        <h3 style="margin:0;font-size:1.45em;font-weight:700;">Sticky CodeNotes <span style="font-size:0.82em;font-weight:400;color:var(--muted-text);">(VS Code Extension)</span></h3>
+      </div>
+      <p style="font-size:1.13em;margin-bottom:0.8em;">
+        <strong>Add sticky notes to your code in VS Code!</strong> Attach, move, and color-code notes on any line in any file. Manage notes via a sidebar, highlight annotated lines, use multiline notes and rich formatting, and persist notes across sessions.<br>
+        <span style="color:var(--muted-text);font-size:0.97em;">Perfect for developers who want to annotate, organize, and revisit important code notes directly in VS Code.</span>
+      </p>
+      <div class="project-tech-row" style="margin-bottom:1em;display:flex;gap:0.7em;flex-wrap:wrap;align-items:center;">
+        <span class="tech-badge" style="background:#3178c6;color:#fff;padding:0.25em 0.85em;border-radius:1em;font-size:0.97em;font-weight:600;display:inline-flex;align-items:center;"><i class="devicon-typescript-plain colored" style="color:#fff;margin-right:0.4em;"></i>TypeScript</span>
+        <span class="tech-badge" style="background:#0078d4;color:#fff;padding:0.25em 0.85em;border-radius:1em;font-size:0.97em;font-weight:600;display:inline-flex;align-items:center;"><i class="fas fa-code" style="color:#fff;margin-right:0.4em;"></i>VS Code API</span>
+        <span class="tech-badge" style="background:#f7df1e;color:#222;padding:0.25em 0.85em;border-radius:1em;font-size:0.97em;font-weight:600;display:inline-flex;align-items:center;"><i class="fas fa-window-restore" style="color:#222;margin-right:0.4em;"></i>Webview</span>
+      </div>
+      <ul style="margin-bottom:1em;">
+        <li>Attach sticky notes to any line of code in any file</li>
+        <li>Move notes to different lines</li>
+        <li>Color code your notes (palette or custom color)</li>
+        <li>Manage notes via a sidebar (view, edit, delete)</li>
+        <li>Rich text formatting: bold, italic, underline, lists, and text color</li>
+        <li>Multiline notes via a webview UI</li>
+        <li>Annotated lines are highlighted in the editor</li>
+        <li>Notes are saved in <code>.vscode/notes.json</code> and persist across sessions</li>
+      </ul>
+      <div style="display:flex;gap:1em;align-items:center;">
+        <a href="https://github.com/NainishK/vscode-codenotes" target="_blank" rel="noopener noreferrer" class="resume-btn" style="padding:0.6em 1.3em;font-size:1em;"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=NainishK.sticky-codenotes" target="_blank" rel="noopener noreferrer" class="resume-btn" style="padding:0.6em 1.3em;font-size:1em;"><i class="fas fa-code"></i> VS Code Marketplace</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="education" class="education">
