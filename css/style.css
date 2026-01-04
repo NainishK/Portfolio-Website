@@ -1082,3 +1082,56 @@ footer {
     }
 }
 
+
+/* Featured Project Styling */
+.project-card.featured {
+    position: relative;
+    border: 2px solid transparent;
+    background-image: linear-gradient(var(--secondary-bg), var(--secondary-bg)), 
+                      linear-gradient(135deg, #8ab4f8 0%, #7c3aed 50%, #4fd1c5 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.15);
+    overflow: visible; /* Allow badge to overflow if needed */
+}
+
+.light-mode .project-card.featured {
+    background-image: linear-gradient(#fff, #fff), 
+                      linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #1abc9c 100%);
+    box-shadow: 0 8px 32px 0 rgba(37, 99, 235, 0.15);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(90deg, #7c3aed, #4fd1c5);
+    color: white;
+    padding: 0.3em 1em;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    z-index: 10;
+}
+
+.smartsubs-btn {
+    background: linear-gradient(90deg, #2563eb, #7c3aed) !important;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.smartsubs-btn:hover {
+    background: linear-gradient(90deg, #1d4ed8, #6d28d9) !important;
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
+    transform: translateY(-2px);
+}
+
+.ai-highlight {
+    color: #4fd1c5; /* Teal accent */
+    font-weight: 600;
+}
+
