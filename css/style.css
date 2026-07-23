@@ -609,7 +609,7 @@ h6 {
         font-size: 2.8rem;
     }
 
-    /* SmartSubs Specific Mobile Tweaks */
+    /* BingeSensei Specific Mobile Tweaks */
     .project-card.featured h3 {
         font-size: 1.25rem !important;
     }
@@ -1367,14 +1367,16 @@ footer {
     z-index: 10;
 }
 
-.smartsubs-btn {
+.smartsubs-btn,
+.bingesensei-btn {
     background: linear-gradient(90deg, #2563eb, #7c3aed) !important;
     border: none;
     position: relative;
     overflow: hidden;
 }
 
-.smartsubs-btn:hover {
+.smartsubs-btn:hover,
+.bingesensei-btn:hover {
     background: linear-gradient(90deg, #1d4ed8, #6d28d9) !important;
     box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
     transform: translateY(-2px);
